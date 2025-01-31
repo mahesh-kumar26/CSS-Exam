@@ -1,0 +1,84 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif; /* Apply custom font */
+}
+
+h1 {
+  font-size: 5em; /* Increased from 3em */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Section Styles */
+.section {
+  position: relative;
+  width: 32%;
+  margin: 0 1% 20px;
+  padding: 10px;
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.section .title {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #f0f0f0;
+  padding: 5px 10px;
+  border: 1px solid black;
+  font-weight: bold;
+  font-size: 1.25em; /* Increased by 25% */
+}
+
+p {
+  font-size: 1.2em; /* Optional: Adjust the size of the paragraph text */
+  margin-top: 40px;
+}
+
+/* Desktop Layout (992px and above) */
+@media (min-width: 992px) {
+  .section {
+    width: 32%;
+    float: left;
+  }
+
+  .section p {
+    margin-top: 20px;
+  }
+}
+
+/* Tablet Layout (768px to 991px) */
+@media (max-width: 991px) and (min-width: 768px) {
+  .section {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+  }
+
+  .section:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .section:nth-child(3) {
+    width: 100%;
+    clear: both;
+    margin-top: 20px;
+  }
+}
+
+/* Mobile Layout (767px and below) */
+@media (max-width: 767px) {
+  .section {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
